@@ -7,6 +7,7 @@
   <version>1.0-SNAPSHOT</version>
   <name>java-hello-world-webapp Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -15,7 +16,23 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
   <build>
     <finalName>java-hello-world</finalName>
   </build>
+  
+  <!-- Artifactory Distribution Management Configuration -->
+  <distributionManagement>
+    <repository>
+      <id>central</id>
+      <name>Artifactory Release Repository</name>
+      <url>https://trialorf8te.jfrog.io/artifactory/fis123-akash/libs-release-local</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshots</id>
+      <name>Artifactory Snapshot Repository</name>
+      <url>https://trialorf8te.jfrog.io/artifactory/fis123-akash/libs-snapshot-local</url>
+    </snapshotRepository>
+  </distributionManagement>
+
 </project>
